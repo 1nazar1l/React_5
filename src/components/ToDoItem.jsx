@@ -1,7 +1,8 @@
 export const ToDoItem = ({todos,toggleTodo, deleteTodo}) => (
-<>
+<div>
 {todos.map((todo) =>
-    <li key={todo.id}>
+    (
+        <li key={todo.id}>
         <label>
             <input
                 type="checkbox"
@@ -13,7 +14,8 @@ export const ToDoItem = ({todos,toggleTodo, deleteTodo}) => (
         <button className="btn btn-danger" onClick={() => deleteTodo(todo?.id)}>
             Delete
         </button>
-    </li>
+        </li>
+    )
 )}
-</>
+</div>
 )

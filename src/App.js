@@ -25,7 +25,7 @@ function App() {
 
       return(
         currentTodos.map((todo) => (
-          todo.id == id ? {...todo,completed} : todo
+          todo.id === id ? {...todo,completed} : todo
         ))
       )
 
